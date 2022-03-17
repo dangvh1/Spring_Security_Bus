@@ -1,6 +1,7 @@
 package com.example.Spring_Security_Bus.controller;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import com.example.Spring_Security_Bus.entity.Busline;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ import com.example.Spring_Security_Bus.service.BuslineService;
 
 
 @Controller
+@RequestMapping("/")
+@AllArgsConstructor
 public class BuslineController {
     @Autowired
     private BuslineService buslineService;

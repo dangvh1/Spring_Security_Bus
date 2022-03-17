@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/page">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"href="${pageContext.request.contextPath}/buslines" >Thêm Danh Sách Tuyến Đường</a>
@@ -75,7 +75,7 @@
             <td>${busline.stopNumber}</td>
             <td>
                 <button type="submit" ><a href="${pageContext.request.contextPath}/busline-remove/${busline.id}">Delete</a></button>
-                <button><a href="/Spring_MVC_BUS_war/busline-update/${busline.id}">Update</a></button>
+                <button type="submit" ><a href="${pageContext.request.contextPath}/busline-update/${busline.id}">Update</a></button>
             </td>
         </tr>
     </c:forEach>

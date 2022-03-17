@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/page">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"href="${pageContext.request.contextPath}/drivers" >Thêm Danh Sách Lái Xe</a>
@@ -65,7 +65,7 @@
         <th>Họ và tên</th>
         <th>Quê quán</th>
         <th>Số Điện Thoại</th>
-        <th>Trình Độ</th>
+        <th>Trình Độ</th>2
         <th>action</th>
     </tr>
     <c:forEach var="driver" items="${drivers}">
@@ -77,8 +77,8 @@
             <td>${driver.phoneNumber}</td>
             <td>${driver.lever}</td>
             <td>
-                <button><a href="/Spring_MVC_BUS_war/driver-remove/${driver.id}">Delete</a></button>
-                <button><a href="/Spring_MVC_BUS_war/driver-update/${driver.id}">Update</a></button>
+                <button><a href="/driver-remove?id=${driver.id}">Delete</a></button>
+                <button><a href="/driver-update/${driver.id}">Update</a></button>
             </td>
         </tr>
     </c:forEach>

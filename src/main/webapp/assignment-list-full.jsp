@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/page">Home <span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -88,8 +88,8 @@
             <td>${assignment.busline.distance}</td>
             <td>${assignment.busLineSum}</td>
             <td>
-                <button><a href="/Spring_MVC_BUS_war/remove-assignment/${assignment.id}">Delete</a></button>
-                <button><a href="/Spring_MVC_BUS_war/update-assignment/${assignment.id}">Update</a></button>
+                <button><a href="${pageContext.request.contextPath}/remove-assignment/${assignment.id}">Delete</a></button>
+                <button><a href="${pageContext.request.contextPath}/update-assignment/${assignment.id}">Update</a></button>
             </td>
         </tr>
     </c:forEach>

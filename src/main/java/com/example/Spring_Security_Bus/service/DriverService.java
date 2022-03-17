@@ -20,15 +20,8 @@ public class DriverService {
     public Driver insertDriver(Driver driver) {
         return driverIml.save(driver);
     }
-    public Driver removeDriver(int id){
-        Optional<Driver> optional = driverIml.findById(id);
-        if(optional.isPresent()){
-            Driver driver = optional.get();
-            driverIml.delete(driver);
-            return  driver;
-        }else {
-            return null;
-        }
+    public void removeDriver(int id){
+        driverIml.deleteById(id);
     }
 
     public void updateDriver(Driver driver) {

@@ -1,5 +1,6 @@
 package com.example.Spring_Security_Bus.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ import com.example.Spring_Security_Bus.service.DriverService;
 import java.util.Objects;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping()
 public class DriverAssignment {
     @Autowired
     private DriverService driverService;
@@ -27,7 +28,7 @@ public class DriverAssignment {
     AssignmentService assignmentService;
 
 //    localhost:8080/
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
     public ModelAndView HOME() {
         return new ModelAndView("driver-assignment-home", "command", new DriverAssignment());
     }

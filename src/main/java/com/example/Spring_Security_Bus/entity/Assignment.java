@@ -30,7 +30,7 @@ public class Assignment implements Serializable {
     @JoinColumn(name = "busline_id")
     private Busline busline;
 
-    @Column(name = "buslineSum", nullable = false)
+    @Column(name = "busline_sum", nullable = false)
     int busLineSum;
 
 }

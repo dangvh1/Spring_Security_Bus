@@ -1,6 +1,7 @@
 package com.example.Spring_Security_Bus.controller;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import com.example.Spring_Security_Bus.entity.Driver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/")
+@AllArgsConstructor
 public class DriverController {
     @Autowired
     private DriverService driverService;
@@ -38,8 +40,8 @@ public class DriverController {
     }
 
 
-    @GetMapping(value = "/driver-remove")
-    public String removeDriver(@PathVariable() int id) {
+    @RequestMapping(value = "/driver-remove", method = RequestMethod.GET)
+    public String removeDriver(@RequestParam int id) {
         driverService.removeDriver(id) ;
         return "redirect:/driver-list";
 

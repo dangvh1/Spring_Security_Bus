@@ -1,6 +1,6 @@
 package com.example.Spring_Security_Bus.service;
 
-import com.example.Spring_Security_Bus.entity.Driver;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.Spring_Security_Bus.entity.Busline;
@@ -8,7 +8,7 @@ import com.example.Spring_Security_Bus.repository.BuslineIml;
 
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class BuslineService  {
@@ -22,15 +22,8 @@ public class BuslineService  {
     public Busline insertBusline(Busline busline) {
         return buslineIml.save(busline);
     }
-    public Busline removeBusline(int id){
-        Optional<Busline> optional = buslineIml.findById(id);
-        if(optional.isPresent()){
-            Busline busline = optional.get();
-            buslineIml.delete(busline);
-            return  busline;
-        }else {
-            return null;
-        }
+    public void removeBusline(int id){
+        buslineIml.deleteById(id);
     }
 
     public Busline updateBusline(Busline busline) {
